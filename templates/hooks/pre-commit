@@ -1,0 +1,6 @@
+#!/bin/sh
+export PHP_CS_FIXER_IGNORE_ENV=1
+FILE=$(find . -type f -name 'pre-commit-php-cs-fixer.php' | head -n 1)
+if test -f "$FILE"; then
+    php $FILE
+fi
